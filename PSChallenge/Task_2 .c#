@@ -1,0 +1,26 @@
+using System;
+
+public class Test
+{
+	public static void Main()
+	{		
+		string[] arr = {"code", "backend", "ai", "circle"};
+		string ex = shortestString(arr);
+		Console.WriteLine(ex);
+	}
+	
+	public static string shortestString(string[] arr)
+	{
+		int theShortest = arr[0].Length;
+		string result = arr[0];
+		for(int i = 1; i < arr.Length; i++)
+		{
+			if(arr[i].Length < theShortest)
+			{
+				theShortest = arr[i].Length;
+				result = arr[i];
+			}
+		}
+		return result;
+	}
+}
